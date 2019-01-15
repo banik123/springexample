@@ -1,24 +1,19 @@
-env.mvnHome = '/usr/share/maven3'
+//env.mvnHome = '/usr/share/maven3'
 node('mavenlabel') {
    
    
    stage('Preparation') { // for display purpos
       
-      git 'https://github.com/jglick/simple-maven-project-with-tests.git'
+      git 'https://github.com/banik123/springexample.git'
         
       
    }
    stage('Build') {
       
-      if (isUnix()) {
-         sh "'${mvnHome}/bin/mvn' clean install"
-      } else {
-         bat(/"${mvnHome}\bin\mvn" -Dmaven.test.failure.ignore clean package/)
-      }
+  echo "bulid"
    }
    stage('Results') {
-      junit '**/target/surefire-reports/TEST-*.xml'
-      archive 'target/*.jar'
+      echo "success"
    }
    
 
