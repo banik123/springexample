@@ -1,10 +1,5 @@
 //env.mvnHome = '/usr/share/maven3'
-//banik
-pipeline {
-    triggers {
-        githubPush()
-    }
-}
+
 node('master') {
    
    
