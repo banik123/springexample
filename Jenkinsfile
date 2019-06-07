@@ -1,5 +1,5 @@
 //env.mvnHome = '/usr/share/maven3'
-//banik
+
 node('master') {
    
    
