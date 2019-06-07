@@ -1,4 +1,9 @@
 //env.mvnHome = '/usr/share/maven3'
+pipeline {
+    triggers {
+        githubPush()
+    }
+}
 node('master') {
    
    
